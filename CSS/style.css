@@ -204,6 +204,13 @@ a {
     transform: rotateY(0deg);
 }
 
+.carte:focus .carte-side.front {
+    transform: rotateY(180deg);
+}
+.carte:focus .carte-side.back {
+    transform: rotateY(0deg);
+}
+
 .flex {
     display: flex;
     justify-content: space-around;
