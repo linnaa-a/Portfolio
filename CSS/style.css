@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Open-Sans";
+    src: url("../Fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf");
+}
+
+@font-face {
+    font-family: "Super-Mario";
+    src: url("../Polices/new_super_mario_font/mario.ttf");
+}
+
+header {
+    background-color: #E60012;
+    padding: 15px;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+img {
+    width: 150px;
+}
+
+main {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.img_container {
+    border: 4px solid white;
+    border-radius: 50px;
+    padding: 10px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    z-index: 5;
+    position: fixed;
+    left: 0;
+    padding: 0;
+    margin-top: 80px; 
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 100vh;
+    background-color: darkred;
+}
+
+.box h3 {
+    text-align: center;
+    margin: 5px 0;
+    color: white;
+    font-size: 10px;
+    font-family: "Open-Sans";
+}
+
+.box {
+    height: 100px; 
+    border-top-right-radius: 15px;
+    background-color: #E60012;
+    display: flex;
+    justify-content: center; 
+    align-items: end;
+    border-bottom: 1px solid #8b0000;
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.box:hover {
+    background-color: rgb(151, 0, 0);
+    transition: 0.2s ease;
+}
+
+
+#Home {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.centered-image {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centered-image img:nth-child(1) {
+    width: 60%;
+    height: auto;
+}
+
+.centered-image img:nth-child(2) {
+    width: 90%;
+    height: auto;
+}
+
+#About-me {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#About-me img {
+    width: 300px;
+}
+
+.carte {
+    position: relative;
+    perspective: 150rem;
+    width: 55%;
+    height: 50vh;
+    background: none;
+    box-shadow: none;
+    margin: 0 auto;
+}
+
+.carte-side.front {
+    border-radius: 8px;
+    background: radial-gradient(50% 50% at 50% 50%, #FF0418 0%, #CD0312 100%);
+    box-shadow: 6px 8px 4px 0px rgba(0, 0, 0, 0.31);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.carte-side.back {
+    border-radius: 8px;
+    background: radial-gradient(50% 50% at 50% 50%, #FCE524 0%, #D7C321 100%);
+    box-shadow: 6px 8px 4px 0px rgba(0, 0, 0, 0.31);
+}
+
+.carte-side {
+    border-radius: 15px;
+    transition: transform 0.8s ease;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.carte p {
+    line-height: 3ex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: justify;
+    font-size: 0.8em;
+    color: #FFFFE7;
+    font-family: "Open-Sans";
+}
+
+.front {
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    font-family: "Super-Mario" !important;
+    -webkit-text-stroke: 2px black;
+}
+
+.back {
+    transform: rotateY(-180deg);
+    background-color: white;
+}
+
+.carte:hover .carte-side.front {
+    transform: rotateY(180deg);
+}
+.carte:hover .carte-side.back {
+    transform: rotateY(0deg);
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container_mystery {
+    width: 500px;
+    margin: 200px auto;
+    position: relative;
+}
+
+.Box_mystery {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+.Box_mystery img:nth-child(1) {
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    box-shadow: 6px 8px 4px 0px rgba(0, 0, 0, 0.31);
+}
+
+.Box_mystery img:nth-child(2) {
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    box-shadow: 6px 8px 4px 0px rgba(0, 0, 0, 0.31);
+}
+
+.hidden-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    z-index: 4;
+    color: #FFFF;
+    text-align: justify;
+}
+
+.Up {
+    animation: Up 1s ease-in-out;
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.Up-down {
+    animation: Up-down 1s ease-in-out;
+}
+
+.Up-text {
+    animation: Up-text 1s ease-in-out;
+}
+
+@keyframes Up {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-20%);
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes Up-down {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    20% {
+        transform: translateY(-20%);
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes Up-text {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    15% {
+        transform: translate(-50%, -200%);
+    }
+    70% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+.skills h1 {
+    color: #159400;
+    font-size: 3rem;
+    font-weight: 200;
+    text-align: center;
+    margin: 30px auto;
+    margin-bottom: 100px;
+    font-family: "Super-Mario";
+}
+
+.flex_skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: static;
+}
+
+.skillbar {
+    position: relative;
+    width: 25vw;
+    height: 7vh;
+    margin: 60px;
+    border-radius: 60px;
+    border: 5px solid #E60012;
+}
+
+.skillbar-bar span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 200;
+    font-family: "Open-Sans";
+}
+
+.skillbar-bar {
+    position: absolute !important;
+    height: 80%;
+    background: #F6DD00;
+    border-radius: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 4px;
+}
+
+.container_project h1 {
+    color: #159400;
+    font-family: "Super-Mario";
+}
+
+.container_project {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.card{
+    border: 4px solid #E60012;
+    font-family: "Open-Sans";
+}
+
+.btn {
+    background-color: #F6DD00;
+    border-color: #E60012;
+}
+
+.btn:hover {
+    background-color: #E60012;
+    border-color: #F6DD00;
+    transition: 0.2s ease;
+}
+
+.card-title {
+    font-family: "Super-Mario";
+    color: #E60012;
+}
+
+.card-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card {
+    margin: 10px;
+}
+
+.contact h1 {
+    color: #159400;
+    font-family: "Super-Mario";
+    font-size: 3rem;
+    font-weight: 200;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact img {
+    width: 50px;
+    height: auto;
+    margin: 10px;
+}
+
+.contact div {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.contact div p {
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: black;
+    margin: 0 10px;
+}
+
+
+
+footer  {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 200px;
+    clip-path: polygon(0 75%, 100% 27%, 100% 100%, 0% 100%);
+    background: #E60012;
+}
+
+footer p{
+    padding: 40px;
+    color: white;
+    font-family: "Open-Sans";
+    text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        flex-direction: column;
+        margin-top: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .box {
+        height: 60px;
+        background-size: 5%;
+    }
+
+    .box h3 {
+        font-size: 14px;
+    }
+
+    .centered-image img:nth-child(1) {
+        width: 250px;
+    }
+
+    .centered-image img:nth-child(2) {
+        width: 300px;
+    }
+
+    #About-me img {
+        width: 200px;
+    }
+
+    .cards {
+        width: 80%;
+        height: auto;
+    }
+
+    .cards p {
+        font-size: 16px;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .flex_skills {
+        flex-direction: column;
+    }
+
+    .skillbar {
+        width: 80vw;
+        margin: 10px;
+    }
+}
