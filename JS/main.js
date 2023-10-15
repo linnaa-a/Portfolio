@@ -11,3 +11,9 @@ let box = document.querySelector('.Box_mystery');
             img.classList.remove('Up');
         }, 1000)
     })
+
+let burger = document.querySelector(".burger")
+let menu = document.querySelector("#menu")
+burger.addEventListener("click", ()=> {
+    menu.classList.toggle('shown') 
+})
